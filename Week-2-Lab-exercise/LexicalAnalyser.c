@@ -96,9 +96,9 @@ int main()
 					fseek(fp1,-2,SEEK_CUR); //go back 2 chars
 					c=fgetc(fp1); // read '<' or '>' again
 					if(c=='<')
-						fprintf(fp2,"\n<=: relational operator LE");
+						fprintf(fp2,"\n<=: less than equal to");
 					else
-						fprintf(fp2,"\n<=: relational operator GE");
+						fprintf(fp2,"\n>=: greater than equal to");
 					c=fgetc(fp1); // read '=' again
 					state=0;
 				}
@@ -107,9 +107,9 @@ int main()
 					fseek(fp1,-2,SEEK_CUR); //go back 2 chars
 					c=fgetc(fp1); // read '<' or '>' again
 					if(c=='<')
-						fprintf(fp2,"\n<: relational operator LT");
+						fprintf(fp2,"\n<:Less than");
 					else
-						fprintf(fp2,"\n>: relational operator GT");
+						fprintf(fp2,"\n>: Greater than");
 					//c=fgetc(fp1) // read '=' again
 					state=0;
 					//ungetc(c,fp1);
@@ -121,9 +121,9 @@ int main()
 					fseek(fp1,-2,SEEK_CUR); //go back 2 chars
 					c=fgetc(fp1); // read '!' or '=' again
 					if(c=='=')
-						fprintf(fp2,"\n==: relational operator EQ");
+						fprintf(fp2,"\n==: comparision");
 					else
-						fprintf(fp2,"\n!=: relational operator NE");
+						fprintf(fp2,"\n!=: not equal to");
 					c=fgetc(fp1); // read '=' again
 					state=0;
 				}
@@ -158,7 +158,7 @@ int main()
 		}//End of switch
 	}//end of while
 	if(state==11)
-		fprintf(fp2,"\ncomment did not close");
+		fprintf(fp2,"\n comment did not close");
 	fclose(fp1);
 	fclose(fp2);
 	// To print symbol table remove these comments
