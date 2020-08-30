@@ -1,0 +1,22 @@
+2020: number
+main : identifier
+(
+)
+{ 
+int : keyword 
+a : identifier
+,
+b : identifier
+==: comparision
+2022: number
+;
+/': invalid lexeme
+<: less than
+>: greater than
++
+<=: less than equal to
+!
+,
+!=: not equal to
+Compiler: identifier
+comment did not close
